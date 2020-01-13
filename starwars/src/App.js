@@ -1,24 +1,17 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import './App.css';
 import Card from './components/Card/Card';
 import Character from './components/Character/Character';
-import axios from 'axios';
+
 
 
 function App() {
-  const [data, setData] = useState([]);
 
-useEffect(() => {
-  axios
-    .get("https://swapi.co/api/people/1/")
-    .then((res) => setData(res.data))
-    .catch((err) => console.log(err));
-}, []);
 
   return (
     <div className="App">
       <Card/>
-      <Character data = {data}/>
+      <Character/>
     </div>
   );
 }

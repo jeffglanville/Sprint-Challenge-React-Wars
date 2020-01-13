@@ -1,15 +1,25 @@
-import React from 'react';
-import Card from '../Card/Card';
+import React, {useState, useEffect} from 'react';
+import axios from 'axios';
 
 
 function Character(props) {
-    return (
+
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+      axios
+        .get("https://swapi.co/api/people/")
+        .then((res) => setData(res.data.results))
+        .catch((err) => console.log(err));
+    }, []);
+
+    return(
         <h1>
-            {props.data.map((name) => {
-                return <Card key = {props.Character.name}/>
+            {data.map((name) => {
+                return <Character key = {data.name}/>
             })}
         </h1>
-    );
+    )
 }
 
 
