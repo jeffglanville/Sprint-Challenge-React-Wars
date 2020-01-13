@@ -3,7 +3,7 @@ import React from 'react'
 function Card(props) {
     return (
         <h1>
-            Character Info
+            Character Info:
         </h1>
     )
 }
