@@ -19,7 +19,7 @@ function App() {
   return (
     <div className="App">
       <Card />
-      <Character data = {data}/>
+      <Character data={data}/>
     </div>
   );
 }
