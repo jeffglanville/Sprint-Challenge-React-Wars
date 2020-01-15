@@ -12,16 +12,18 @@ const Char = styled.div`
     display: flex;
     justify-content: center;
     margin: 5px;
-    width: 75%;
+    width: 95%;
     height: 10vh;
-    background-color: #C8DCE1;
-    box-shadow: 5px 5px;
+    background-color: #DAD6D6;
+    box-shadow: 2.5px 2.5px;
+    border: 2px solid red;
 `
 
 const Para = styled.p`
     justify-content: space-evenly;
-    font-size: 1rem;
+    font-size: 1.25rem;
     margin: 10px;
+    color: crimson;
 `
 
 function Card(props) {
